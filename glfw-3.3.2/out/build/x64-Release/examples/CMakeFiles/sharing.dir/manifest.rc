@@ -1,0 +1,2 @@
+#pragma code_page(65001)
+1 /* CREATEPROCESS_MANIFEST_RESOURCE_ID */ 24 /* RT_MANIFEST */ "E:/Repositories/GK/glfw-3.3.2/out/build/x64-Release/examples/CMakeFiles/sharing.dir/embed.manifest"
