@@ -59,9 +59,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Default.shader">
-      <Filter>Source Files</Filter>
-    </None>
     <None Include="externals\glm\detail\func_common.inl">
       <Filter>Header Files</Filter>
     </None>
@@ -470,6 +467,9 @@
     <None Include="externals\glm\gtx\wrap.inl">
       <Filter>Header Files</Filter>
     </None>
+    <None Include="Specular_Diffuse.shader" />
+    <None Include="README.md" />
+    <None Include=".gitignore" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Renderer.h">
@@ -1351,9 +1351,12 @@
     <ClInclude Include="CameraController.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="CubeGenerator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="Club_icon_driver.png">
+    <Image Include="pobrane.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

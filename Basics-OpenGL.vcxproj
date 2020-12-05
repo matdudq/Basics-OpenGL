@@ -168,7 +168,7 @@
     <ClCompile Include="VertexBufferLayout.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Default.shader" />
+    <None Include=".gitignore" />
     <None Include="externals\glm\detail\func_common.inl" />
     <None Include="externals\glm\detail\func_common_simd.inl" />
     <None Include="externals\glm\detail\func_exponential.inl" />
@@ -305,10 +305,13 @@
     <None Include="externals\glm\gtx\vector_angle.inl" />
     <None Include="externals\glm\gtx\vector_query.inl" />
     <None Include="externals\glm\gtx\wrap.inl" />
+    <None Include="README.md" />
+    <None Include="Specular_Diffuse.shader" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camera.h" />
     <ClInclude Include="CameraController.h" />
+    <ClInclude Include="CubeGenerator.h" />
     <ClInclude Include="externals\glm\common.hpp" />
     <ClInclude Include="externals\glm\detail\compute_common.hpp" />
     <ClInclude Include="externals\glm\detail\compute_vector_relational.hpp" />
@@ -602,7 +605,7 @@
     <ClInclude Include="VertexBufferLayout.h" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="Club_icon_driver.png" />
+    <Image Include="pobrane.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
