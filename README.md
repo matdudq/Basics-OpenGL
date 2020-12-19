@@ -10,7 +10,7 @@ Used standard - OPENGL 3.3 CORE
 Implemented features:
 1. MVP management.
 2. Camera management.
-3. Cube generation.
+3. Cube and egg mesh procedular generator.
 4. Textures management.
 5. Vertex buffer, vertex arrays, indices buffer abstracted.
 6. Shaders management.
