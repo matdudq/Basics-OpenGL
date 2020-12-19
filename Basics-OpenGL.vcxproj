@@ -73,19 +73,19 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <LibraryPath>E:\Repositories\Renderer3D\glfw-3.3.2\out\build\x64-Debug\src;$(LibraryPath)</LibraryPath>
+    <LibraryPath>E:\Repositories\Basics-OpenGL\glfw-3.3.2\out\build\x64-Debug\src;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <LibraryPath>E:\Repositories\Renderer3D\glfw-3.3.2\out\build\x64-Release\src;$(LibraryPath)</LibraryPath>
+    <LibraryPath>E:\Repositories\Basics-OpenGL\glfw-3.3.2\out\build\x64-Release\src;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <LibraryPath>E:\Repositories\Renderer3D\glfw-3.3.2\out\build\x64-Debug\src;$(LibraryPath)</LibraryPath>
+    <LibraryPath>E:\Repositories\Basics-OpenGL\glfw-3.3.2\out\build\x64-Debug\src;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <LibraryPath>E:\Repositories\Renderer3D\glfw-3.3.2\out\build\x64-Release\src;$(LibraryPath)</LibraryPath>
+    <LibraryPath>E:\Repositories\Basics-OpenGL\glfw-3.3.2\out\build\x64-Release\src;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -93,7 +93,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>E:\Repositories\Renderer3D\externals;E:\Repositories\Renderer3D\glfw-3.3.2\include;E:\Repositories\Renderer3D\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\Repositories\Basics-OpenGL\externals;E:\Repositories\Basics-OpenGL\glfw-3.3.2\include;E:\Repositories\Basics-OpenGL\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -109,7 +109,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>E:\Repositories\Renderer3D\externals;E:\Repositories\Renderer3D\glfw-3.3.2\include;E:\Repositories\Renderer3D\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\Repositories\Basics-OpenGL\externals;E:\Repositories\Basics-OpenGL\glfw-3.3.2\include;E:\Repositories\Basics-OpenGL\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -125,7 +125,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>E:\Repositories\Renderer3D\externals;E:\Repositories\Renderer3D\glfw-3.3.2\include;E:\Repositories\Renderer3D\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\Repositories\Basics-OpenGL\externals;E:\Repositories\Basics-OpenGL\glfw-3.3.2\include;E:\Repositories\Basics-OpenGL\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -141,7 +141,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>E:\Repositories\Renderer3D\externals;E:\Repositories\Renderer3D\glfw-3.3.2\include;E:\Repositories\Renderer3D\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\Repositories\Basics-OpenGL\externals;E:\Repositories\Basics-OpenGL\glfw-3.3.2\include;E:\Repositories\Basics-OpenGL\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

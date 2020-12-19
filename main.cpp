@@ -54,23 +54,20 @@ int main()
 			return 1;
 		}
 
-		glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
+		glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
 
 		GLCALL(glEnable(GL_DEPTH_TEST));
 
-		glm::vec3 position(0.0, 0.0, 0.0);
-		float size = 1;
-
-		CubeData cubeData = GenerateCube(size, position);
+		ShapeData& eggData = GenerateEgg(3.0f,10.0f, 100 );
 
 		VertexArray va;
-		VertexBuffer vb(cubeData.vertexBuffer.data(), cubeData.VERTEX_BUFFER_COUNT * sizeof(float));
+		VertexBuffer vb(eggData.m_VertexBuffer.data(), eggData.m_VertexBuffer.size() * sizeof(float));
 		VertexBufferLayout layout;
 		layout.Push<float>(3);
 		layout.Push<float>(2);
 		layout.Push<float>(3);
 		va.AddBuffer(vb, layout);
-		IndexBuffer ib(cubeData.indexBuffer.data(), cubeData.INDICES_COUNT);
+		IndexBuffer ib(eggData.m_IndexBuffer.data(), eggData.m_IndexBuffer.size());
 
 		Shader shader("Specular_Diffuse.shader");
 		shader.Bind();

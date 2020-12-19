@@ -37,10 +37,10 @@ void main()
 {
 	vec4 texColor = texture(u_Texture, v_TexCoord);
 
-	vec4 lightColor = vec4(1.0, 1.0, 1.0, 1.0);
+	vec4 ambient = vec4(0.1, 0.1, 1.0, 1.0);
 	vec3 viewDirection = normalize(u_CameraPos - v_WorldPosition);
 	vec3 halfVector = normalize(u_LightDir + viewDirection);
-	float specular = pow(clamp(dot(viewDirection, v_Normal), 0, 1), 100);
-	float diffuse =  clamp(dot(u_LightDir, v_Normal), 0.1, 1);
-	color = (specular + diffuse)* texColor;
+	float specular = pow(clamp(dot(halfVector, v_Normal), 0, 1), 100);
+	float diffuse =  clamp(dot(u_LightDir, v_Normal), 0.0, 1);
+	color = clamp( (ambient + specular + diffuse),0,1) * texColor;
 }
