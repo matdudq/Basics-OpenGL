@@ -15,65 +15,66 @@ struct ShapeData
 	}
 };
 
-void GenerateCube(float size, glm::vec3 position)
+ShapeData& GenerateCube(float size, glm::vec3 position)
 {
-	//glm::vec3 wallsNormals[6] = { glm::vec3(0,0,-1),
-	//							 glm::vec3(1,0,0),
-	//							 glm::vec3(0,0,1),
-	//							 glm::vec3(-1,0,0),
-	//							 glm::vec3(0,1,0),
-	//							 glm::vec3(0,-1,0) };
+	glm::vec3 wallsNormals[6] = { glm::vec3(0,0,-1),
+								 glm::vec3(1,0,0),
+								 glm::vec3(0,0,1),
+								 glm::vec3(-1,0,0),
+								 glm::vec3(0,1,0),
+								 glm::vec3(0,-1,0) };
 
-	//float m_VertexBuffer[] = {
-	//		-size + position.x, -size + position.y, -size + position.z, 0, 0, wallsNormals[0].x, wallsNormals[0].y, wallsNormals[0].z, //0
-	//		 size + position.x, -size + position.y, -size + position.z, 1, 0, wallsNormals[0].x, wallsNormals[0].y, wallsNormals[0].z, //1
-	//		 size + position.x,  size + position.y, -size + position.z, 1, 1, wallsNormals[0].x, wallsNormals[0].y, wallsNormals[0].z, //2
-	//		-size + position.x,  size + position.y, -size + position.z, 0, 1, wallsNormals[0].x, wallsNormals[0].y, wallsNormals[0].z, //3
+	float m_VertexBuffer[] = {
+			-size + position.x, -size + position.y, -size + position.z, 0, 0, wallsNormals[0].x, wallsNormals[0].y, wallsNormals[0].z, //0
+			 size + position.x, -size + position.y, -size + position.z, 1, 0, wallsNormals[0].x, wallsNormals[0].y, wallsNormals[0].z, //1
+			 size + position.x,  size + position.y, -size + position.z, 1, 1, wallsNormals[0].x, wallsNormals[0].y, wallsNormals[0].z, //2
+			-size + position.x,  size + position.y, -size + position.z, 0, 1, wallsNormals[0].x, wallsNormals[0].y, wallsNormals[0].z, //3
 
-	//		 size + position.x, -size + position.y, -size + position.z, 1, 0, wallsNormals[1].x, wallsNormals[1].y, wallsNormals[1].z, //1
-	//		 size + position.x, -size + position.y,  size + position.z, 0, 0, wallsNormals[1].x, wallsNormals[1].y, wallsNormals[1].z, //5
-	//		 size + position.x,  size + position.y,  size + position.z, 0, 1, wallsNormals[1].x, wallsNormals[1].y, wallsNormals[1].z, //6
-	//		 size + position.x,  size + position.y, -size + position.z, 1, 1, wallsNormals[1].x, wallsNormals[1].y, wallsNormals[1].z, //2
+			 size + position.x, -size + position.y, -size + position.z, 1, 0, wallsNormals[1].x, wallsNormals[1].y, wallsNormals[1].z, //1
+			 size + position.x, -size + position.y,  size + position.z, 0, 0, wallsNormals[1].x, wallsNormals[1].y, wallsNormals[1].z, //5
+			 size + position.x,  size + position.y,  size + position.z, 0, 1, wallsNormals[1].x, wallsNormals[1].y, wallsNormals[1].z, //6
+			 size + position.x,  size + position.y, -size + position.z, 1, 1, wallsNormals[1].x, wallsNormals[1].y, wallsNormals[1].z, //2
 
-	//		 size + position.x, -size + position.y,  size + position.z, 0, 0, wallsNormals[2].x, wallsNormals[2].y, wallsNormals[2].z, //5
-	//		-size + position.x, -size + position.y,  size + position.z, 1, 0, wallsNormals[2].x, wallsNormals[2].y, wallsNormals[2].z, //4
-	//		-size + position.x,  size + position.y,  size + position.z, 1, 1, wallsNormals[2].x, wallsNormals[2].y, wallsNormals[2].z, //7
-	//		 size + position.x,  size + position.y,  size + position.z, 0, 1, wallsNormals[2].x, wallsNormals[2].y, wallsNormals[2].z, //6
+			 size + position.x, -size + position.y,  size + position.z, 0, 0, wallsNormals[2].x, wallsNormals[2].y, wallsNormals[2].z, //5
+			-size + position.x, -size + position.y,  size + position.z, 1, 0, wallsNormals[2].x, wallsNormals[2].y, wallsNormals[2].z, //4
+			-size + position.x,  size + position.y,  size + position.z, 1, 1, wallsNormals[2].x, wallsNormals[2].y, wallsNormals[2].z, //7
+			 size + position.x,  size + position.y,  size + position.z, 0, 1, wallsNormals[2].x, wallsNormals[2].y, wallsNormals[2].z, //6
 
-	//		-size + position.x, -size + position.y,  size + position.z, 1, 0, wallsNormals[3].x, wallsNormals[3].y, wallsNormals[3].z, //4
-	//		-size + position.x, -size + position.y, -size + position.z, 0, 0, wallsNormals[3].x, wallsNormals[3].y, wallsNormals[3].z, //0
-	//		-size + position.x,  size + position.y, -size + position.z, 0, 1, wallsNormals[3].x, wallsNormals[3].y, wallsNormals[3].z, //3
-	//		-size + position.x,  size + position.y,  size + position.z, 1, 1, wallsNormals[3].x, wallsNormals[3].y, wallsNormals[3].z, //7
+			-size + position.x, -size + position.y,  size + position.z, 1, 0, wallsNormals[3].x, wallsNormals[3].y, wallsNormals[3].z, //4
+			-size + position.x, -size + position.y, -size + position.z, 0, 0, wallsNormals[3].x, wallsNormals[3].y, wallsNormals[3].z, //0
+			-size + position.x,  size + position.y, -size + position.z, 0, 1, wallsNormals[3].x, wallsNormals[3].y, wallsNormals[3].z, //3
+			-size + position.x,  size + position.y,  size + position.z, 1, 1, wallsNormals[3].x, wallsNormals[3].y, wallsNormals[3].z, //7
 
-	//		-size + position.x,  size + position.y, -size + position.z, 0, 1, wallsNormals[4].x, wallsNormals[4].y, wallsNormals[4].z, //3
-	//		 size + position.x,  size + position.y, -size + position.z, 1, 1, wallsNormals[4].x, wallsNormals[4].y, wallsNormals[4].z, //2
-	//		 size + position.x,  size + position.y,  size + position.z, 0, 1, wallsNormals[4].x, wallsNormals[4].y, wallsNormals[4].z, //6
-	//		-size + position.x,  size + position.y,  size + position.z, 1, 1, wallsNormals[4].x, wallsNormals[4].y, wallsNormals[4].z, //7
+			-size + position.x,  size + position.y, -size + position.z, 0, 1, wallsNormals[4].x, wallsNormals[4].y, wallsNormals[4].z, //3
+			 size + position.x,  size + position.y, -size + position.z, 1, 1, wallsNormals[4].x, wallsNormals[4].y, wallsNormals[4].z, //2
+			 size + position.x,  size + position.y,  size + position.z, 0, 1, wallsNormals[4].x, wallsNormals[4].y, wallsNormals[4].z, //6
+			-size + position.x,  size + position.y,  size + position.z, 1, 1, wallsNormals[4].x, wallsNormals[4].y, wallsNormals[4].z, //7
 
-	//		-size + position.x, -size + position.y, -size + position.z, 0, 0, wallsNormals[5].x, wallsNormals[5].y, wallsNormals[5].z, //0
-	//		 size + position.x, -size + position.y, -size + position.z, 1, 0, wallsNormals[5].x, wallsNormals[5].y, wallsNormals[5].z, //1
-	//		 size + position.x, -size + position.y,  size + position.z, 0, 0, wallsNormals[5].x, wallsNormals[5].y, wallsNormals[5].z, //5
-	//		-size + position.x, -size + position.y,  size + position.z, 1, 0, wallsNormals[5].x, wallsNormals[5].y, wallsNormals[5].z, //4
-	//};
+			-size + position.x, -size + position.y, -size + position.z, 0, 0, wallsNormals[5].x, wallsNormals[5].y, wallsNormals[5].z, //0
+			 size + position.x, -size + position.y, -size + position.z, 1, 0, wallsNormals[5].x, wallsNormals[5].y, wallsNormals[5].z, //1
+			 size + position.x, -size + position.y,  size + position.z, 0, 0, wallsNormals[5].x, wallsNormals[5].y, wallsNormals[5].z, //5
+			-size + position.x, -size + position.y,  size + position.z, 1, 0, wallsNormals[5].x, wallsNormals[5].y, wallsNormals[5].z, //4
+	};
 
-	//cubeData.m_IndexBuffer = {
-	//	0,1,3,
-	//	1,2,3,
-	//	4,5,7,
-	//	5,6,7,
-	//	8,9,11,
-	//	9,10,11,
-	//	12,13,15,
-	//	13,14,15,
-	//	16,17,19,
-	//	17,18,19,
-	//	20,21,23,
-	//	21,22,23
-	//};
+	unsigned int m_IndexBuffer[] = {
+		0,1,3,
+		1,2,3,
+		4,5,7,
+		5,6,7,
+		8,9,11,
+		9,10,11,
+		12,13,15,
+		13,14,15,
+		16,17,19,
+		17,18,19,
+		20,21,23,
+		21,22,23
+	};
 
-	//ShapeData cubeData = ShapeData()
+	std::vector<float>* vertexBuffer = new std::vector<float>(&m_VertexBuffer[0],&m_VertexBuffer[191]);
+	std::vector<unsigned int>* indexBuffer = new std::vector<unsigned int>(&m_IndexBuffer[0],&m_IndexBuffer[35]);
 
-	//return cubeData;
+	return *(new ShapeData(*vertexBuffer, *indexBuffer));
 }
 
 ShapeData& GenerateEgg(float maximalRadius, float height, unsigned int resolution = 100)
@@ -176,8 +177,5 @@ ShapeData& GenerateEgg(float maximalRadius, float height, unsigned int resolutio
 		vertexBuffer->push_back(eggVertexNormalsArray[i].z);
 	}
 
-	ShapeData* data = new ShapeData(*vertexBuffer, *indicesArray);
-	return *data;
+	return *(new ShapeData(*vertexBuffer, *indicesArray));
 }
-
-

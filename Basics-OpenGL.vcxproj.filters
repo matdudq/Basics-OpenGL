@@ -1351,7 +1351,7 @@
     <ClInclude Include="CameraController.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CubeGenerator.h">
+    <ClInclude Include="MeshGenerator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -311,7 +311,7 @@
   <ItemGroup>
     <ClInclude Include="Camera.h" />
     <ClInclude Include="CameraController.h" />
-    <ClInclude Include="CubeGenerator.h" />
+    <ClInclude Include="MeshGenerator.h" />
     <ClInclude Include="externals\glm\common.hpp" />
     <ClInclude Include="externals\glm\detail\compute_common.hpp" />
     <ClInclude Include="externals\glm\detail\compute_vector_relational.hpp" />
