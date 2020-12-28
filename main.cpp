@@ -15,7 +15,7 @@
 #include "Renderer.h"
 #include "Texture.h"
 #include "CameraController.h"
-#include "CubeGenerator.h"
+#include "MeshGenerator.h"
 
 constexpr int WIDTH = 1280;
 constexpr int HEIGHT = 720;
